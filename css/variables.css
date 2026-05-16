@@ -1,0 +1,61 @@
+/* Color Variables */
+:root {
+  --accent: #f7d400; /* brand yellow */
+  --accent-rgb: 247 212 0; /* same color as --accent, but as R G B */
+  --accent-ink: #0b0f16; /* text on yellow */
+  --text: #0f172a;
+  --muted: #475569;
+  --bg: #ffffff;
+
+  --header-bg: #182434;
+  --header-h: 96px;
+
+  --primary: #10b981;
+  --primary-dark: #059669;
+  --primary-light: #2f7ae0;
+  --bg2: #1a202c;
+  --panel: #1e293b;
+  --line: rgba(248, 250, 252, 0.18);
+}
+
+/* Typography */
+:root {
+  --font-family:
+    ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  --font-size-base: 16px;
+  --font-size-sm: 12px;
+  --font-size-xs: 11px;
+  --font-size-lg: 13px;
+  --font-size-xl: 56px;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 900;
+  --font-weight-black: 800;
+}
+
+/* Spacing */
+:root {
+  --spacing-xs: 8px;
+  --spacing-sm: 14px;
+  --spacing-md: 18px;
+  --spacing-lg: 22px;
+  --spacing-xl: 26px;
+  --spacing-2xl: 36px;
+  --spacing-3xl: 48px;
+  --spacing-4xl: 64px;
+}
+
+/* Border Radius */
+:root {
+  --radius-none: 0;
+  --radius-sm: 14px;
+  --radius-md: 18px;
+  --radius-full: 999px;
+}
+
+/* Shadows */
+:root {
+  --shadow-sm: 0 18px 28px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 24px 54px rgba(0, 0, 0, 0.38);
+}

@@ -1,0 +1,205 @@
+/* Why Choose Us Section */
+.why-choose {
+  padding: var(--spacing-4xl) 0;
+  background: var(--bg);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.why-choose__header {
+  text-align: center;
+  margin-bottom: var(--spacing-4xl);
+  animation: slideDown 0.6s ease-out;
+}
+
+.why-choose__header h2 {
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-extra-bold);
+  margin-bottom: var(--spacing-md);
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.why-choose__header h2 .accent {
+  color: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, #ffd60a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.why-choose__header p {
+  font-size: 1.1rem;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.why-choose__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-2xl);
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.why-choose__card {
+  padding: var(--spacing-2xl);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.why-choose__card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease-out;
+}
+
+.why-choose__card:hover::before {
+  transform: scaleX(1);
+}
+
+.why-choose__card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 12px 48px rgba(247, 212, 0, 0.12);
+  transform: translateY(-8px);
+  background: linear-gradient(135deg, #fffbf0 0%, #ffffff 100%);
+}
+
+.why-choose__icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-lg);
+  display: inline-block;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+  animation: float 3s ease-in-out infinite;
+}
+
+.why-choose__icon:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.why-choose__card:nth-child(1) .why-choose__icon {
+  animation-delay: 0s;
+}
+
+.why-choose__card:nth-child(2) .why-choose__icon {
+  animation-delay: 0.1s;
+}
+
+.why-choose__card:nth-child(3) .why-choose__icon {
+  animation-delay: 0.2s;
+}
+
+.why-choose__card:nth-child(4) .why-choose__icon {
+  animation-delay: 0.3s;
+}
+
+.why-choose__card:nth-child(5) .why-choose__icon {
+  animation-delay: 0.4s;
+}
+
+.why-choose__card:nth-child(6) .why-choose__icon {
+  animation-delay: 0.5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.why-choose__card h3 {
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--text);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.4;
+}
+
+.why-choose__card p {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .why-choose__header h2 {
+    font-size: 2rem;
+  }
+
+  .why-choose__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    padding: 0 var(--spacing-md);
+  }
+
+  .why-choose__card {
+    padding: var(--spacing-xl);
+  }
+
+  .why-choose__icon {
+    font-size: 2.5rem;
+  }
+
+  .why-choose__card h3 {
+    font-size: 1.1rem;
+  }
+
+  .why-choose__card p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .why-choose__header h2 {
+    font-size: 1.5rem;
+  }
+
+  .why-choose__header {
+    margin-bottom: var(--spacing-2xl);
+  }
+}

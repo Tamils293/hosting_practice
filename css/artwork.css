@@ -1,0 +1,163 @@
+/* Artwork Section - Marketing Object */
+.art {
+  position: relative;
+  height: 420px;
+}
+
+/* Marketing Object Container */
+.splash {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Floating Marketing Object */
+.marketing-object {
+  width: 320px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: smoothFloat 6s ease-in-out infinite;
+  filter: drop-shadow(0 20px 40px rgba(16, 185, 129, 0.2));
+}
+
+.speaker-image,
+.spaceship-image {
+  width: 380px;
+  height: 380px;
+  object-fit: contain;
+  filter: brightness(1.1) contrast(1.2) saturate(1.3);
+  mix-blend-mode: lighten;
+  border-radius: 20px;
+}
+
+.marketing-object svg {
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.object-label {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #10b981;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@keyframes smoothFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-40px);
+  }
+}
+
+/* Hero Content Animation */
+.hero-content {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.sub {
+  margin-top: var(--spacing-md);
+  max-width: 520px;
+  color: var(--muted);
+  font-size: var(--font-size-lg);
+  line-height: 1.55;
+}
+
+/* Responsive */
+@media (max-width: 980px) {
+  .art {
+    height: 350px;
+  }
+  .splash {
+    right: 20px;
+    width: 280px;
+    height: 280px;
+  }
+  .marketing-object {
+    width: 250px;
+    height: 250px;
+  }
+  .spaceship-image,
+  .speaker-image {
+    width: 220px;
+    height: 220px;
+  }
+  .object-label {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 720px) {
+  .art {
+    height: 300px;
+  }
+  .splash {
+    right: 10px;
+    width: 230px;
+    height: 230px;
+  }
+  .marketing-object {
+    width: 200px;
+    height: 200px;
+  }
+  .spaceship-image,
+  .speaker-image {
+    width: 170px;
+    height: 170px;
+  }
+  .object-label {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 520px) {
+  .art {
+    height: 250px;
+  }
+  .splash {
+    right: 0;
+    width: 180px;
+    height: 200px;
+  }
+  .marketing-object {
+    width: 160px;
+    height: 160px;
+  }
+  .spaceship-image,
+  .speaker-image {
+    width: 140px;
+    height: 140px;
+  }
+  .object-label {
+    font-size: 12px;
+  }
+}
